@@ -1,10 +1,8 @@
-import { FC, useContext } from 'react';
-import { Context } from '../../context';
+import { FC } from 'react';
+import { useCartContext } from '../../hooks';
 
 const Landing: FC = () => {
-  const context = useContext(Context);
-
-  const carrito = context?.cart;
+  const { cart, addItem } = useCartContext();
 
   return (
     <>
@@ -18,7 +16,8 @@ const Landing: FC = () => {
         <span>Home</span>
         <span>About</span>
         <span>Contact</span>
-        <div>{carrito?.items.length}</div>
+        <div>{cart.total}</div>
+        <button onClick={addItem}></button>
       </nav>
     </>
   );
