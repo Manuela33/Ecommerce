@@ -1,11 +1,13 @@
-import { FC } from 'react';
-import items from '../../database';
+import { FC } from "react";
+import ProductList from "../ProductList/ProductList";
+import items from "../../database";
 
 const Landing: FC = () => {
   return (
     <>
+      <ProductList items={items} />
     </>
-  )
+  );
 };
 
 export default Landing;
