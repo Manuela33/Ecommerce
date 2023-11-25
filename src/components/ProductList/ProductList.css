@@ -11,9 +11,9 @@
 
 .products_box {
   border: solid 2px black;
-  max-width: 15rem;
-  min-width: 10rem;
-  height: 6rem;
+  max-width: 20rem;
+  min-width: 15rem;
+  min-height: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,6 +30,15 @@
   font-size: 1rem;
 }
 
+.products_quantity {
+  font-size: 1rem;
+  background-color: rgb(73, 125, 221);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  left: -6rem;
+}
+
 .picture_container {
   width: 80%;
   height: 80%;
@@ -41,4 +50,9 @@
 .picture {
   width: 100%;
   object-fit: fill;
+}
+
+.buttons {
+  display: flex;
+  gap: 5px;
 }

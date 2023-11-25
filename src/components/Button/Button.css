@@ -1,0 +1,20 @@
+.button {
+  border-radius: 10px;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.blue {
+  background-color: rgb(106, 106, 255);
+}
+
+.red {
+  background-color: rgb(255, 130, 130);
+}
+
+.disabled {
+  background-color: rgb(146, 145, 145);
+  cursor: not-allowed;
+}

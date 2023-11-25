@@ -3,6 +3,9 @@ import { Item } from "../../types";
 import "./ProductList.css";
 import { formatCurrency } from "../../utils";
 import { useCartContext } from "../../hooks";
+import Button from "../Button/Button";
+import { MdAddShoppingCart } from "react-icons/md";
+import { MdOutlineRemoveShoppingCart } from "react-icons/md";
 
 interface ProductListProps {
   items: Item[];
@@ -22,10 +25,18 @@ const ProductList: FC<ProductListProps> = ({ items }) => {
             <div className="picture_container">
               <img src={item.picture} alt="" className="picture" />
             </div>
-            <button onClick={() => addItem(item.id)}>add to cart</button>
-            <button onClick={() => deleteItem(item.id)}>
-              delete from cart
-            </button>
+            <div className="buttons">
+              <Button
+                onClick={() => addItem(item.id)}
+                color="blue"
+                icon={<MdAddShoppingCart />}
+              />
+              <Button
+                onClick={() => deleteItem(item.id)}
+                color={currentItem ? "red" : "disabled"}
+                icon={<MdOutlineRemoveShoppingCart />}
+              />
+            </div>
           </div>
         );
       })}
