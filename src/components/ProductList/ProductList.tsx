@@ -19,6 +19,9 @@ const ProductList: FC<ProductListProps> = ({ items }) => {
             <div className="products_quantity">{currentItem?.quantity}</div>
             <div className="products_name">{item.name}</div>
             <div className="products_price">{formatCurrency(item.price)}</div>
+            <div className="picture_container">
+              <img src={item.picture} alt="" className="picture" />
+            </div>
             <button onClick={() => addItem(item.id)}>add to cart</button>
             <button onClick={() => deleteItem(item.id)}>
               delete from cart
