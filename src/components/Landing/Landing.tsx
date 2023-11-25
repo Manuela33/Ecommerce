@@ -1,6 +1,6 @@
 import { FC } from "react";
-import ProductList from "../ProductList/ProductList";
 import items from "../../database";
+import ProductList from "../ProductList/ProductList";
 
 const Landing: FC = () => {
   return (
